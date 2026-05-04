@@ -109,7 +109,10 @@ function setGreeting() {
 // ===============================
 function logout() {
     localStorage.clear();
-    showAlert("Anda telah logout");
+
+    setTimeout(() => {
+        window.location.href = "login.html";
+    }, 300);
 }
 
 // ===============================
