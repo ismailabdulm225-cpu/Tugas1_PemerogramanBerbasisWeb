@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracking Pengiriman SITTA</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar-sitta">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="stok.html">Informasi Bahan Ajar</a>
+        <a href="tracking.html">Tracking Pengiriman</a>
+
+        <div class="dropdown">
+            <button class="dropbtn">Laporan ▼</button>
+            <div class="dropdown-content">
+                <a href="#">Monitoring Progress DO Bahan Ajar</a>
+                <a href="#">Rekap Bahan Ajar</a>
+            </div>
+        </div>
+
+        <a href="#">Histori Transaksi</a>
+        <a href="index.html" onclick="logout()">Logout</a>
+    </nav>
+
+    <!-- CONTENT -->
+    <main class="tracking-modern">
+        <header>
+            <h1>Tracking Pengiriman</h1>
+        </header>
+
+        <!-- Section -->
+        <section class="tracking-search-box">
+            <label for="trackingInput">Nomor Delivery Order</label>
+            <input type="text" id="trackingInput" placeholder="Masukkan nomor DO">
+            <button onclick="searchTracking()" class="btn-search">Cari</button>
+        </section>
+
+        <!-- RESULT -->
+        <section id="trackingResult" class="tracking-result-modern">
+        </section>
+    </main>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

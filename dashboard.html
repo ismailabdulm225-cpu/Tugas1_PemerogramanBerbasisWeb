@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Aplikasi SITTA</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="dashboard-page" onload="setGreeting()">
+
+    <!-- NAVBAR -->
+    <nav class="navbar-sitta">
+
+        <div class="nav-left">
+            <a href="stok.html">Informasi Bahan Ajar</a>
+            <a href="tracking.html">Tracking Pengiriman</a>
+
+            <div class="dropdown">
+                <button class="dropbtn">Laporan ▼</button>
+                <div class="dropdown-content">
+                    <a href="#">Monitoring Progress DO Bahan Ajar</a>
+                    <a href="#">Rekap Bahan Ajar</a>
+                </div>
+            </div>
+
+            <a href="#">Histori Transaksi Bahan Ajar</a>
+        </div>
+
+        <div class="nav-right">
+            <a href="index.html" onclick="logout()">Logout</a>
+        </div>
+
+    </nav>
+
+    <!-- CONTENT -->
+    <main class="dashboard-sitta">
+        <header>
+            <h1>Dashboard SITTA UT</h1>
+            <h3 id="greeting"></h3>
+        </header>
+
+        <section class="dashboard-info-box">
+            <p>
+                Selamat datang di Sistem Informasi Tiras dan Transaksi Bahan Ajar Universitas Terbuka.
+                Gunakan menu navigasi di atas untuk mengakses informasi bahan ajar,
+                tracking pengiriman, laporan, dan histori transaksi.
+            </p>
+        </section>
+    </main>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

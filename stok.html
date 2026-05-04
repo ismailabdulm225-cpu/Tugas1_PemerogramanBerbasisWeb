@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informasi Bahan Ajar SITTA</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body onload="loadStok()">
+
+    <!-- NAVBAR -->
+    <nav class="navbar-sitta">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="stok.html">Informasi Bahan Ajar</a>
+        <a href="tracking.html">Tracking Pengiriman</a>
+
+        <div class="dropdown">
+            <button class="dropbtn">Laporan ▼</button>
+            <div class="dropdown-content">
+                <a href="#">Monitoring Progress DO</a>
+                <a href="#">Rekap Bahan Ajar</a>
+            </div>
+        </div>
+
+        <a href="#">Histori Transaksi</a>
+        <a href="index.html" onclick="logout()">Logout</a>
+    </nav>
+
+    <!-- CONTENT -->
+    <main class="stok-modern">
+        <header>
+            <h1>Informasi Bahan Ajar</h1>
+            <p class="desc">
+                Data bahan ajar Universitas Terbuka ditampilkan berdasarkan database distribusi SITTA.
+            </p>
+        </header>
+
+        <!-- GRID STOK -->
+        <div id="stokContainer" class="stok-grid-modern"></div>
+
+        <!-- FORM TAMBAH -->
+        <section class="form-stok">
+            <h3>Tambah Data Bahan Ajar</h3>
+
+            <input type="text" id="kodeBarang" placeholder="Kode Barang">
+            <input type="text" id="namaBarang" placeholder="Nama Barang">
+            <input type="number" id="stok" placeholder="Stok">
+
+            <button onclick="addStok()" class="btn-add">Tambah Data</button>
+        </section>
+    </main>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

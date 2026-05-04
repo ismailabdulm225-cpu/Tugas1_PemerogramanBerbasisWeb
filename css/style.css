@@ -1,0 +1,894 @@
+/*===== LOGIN BACKGROUND UT BLUE GOLD =====*/
+html,
+body {
+    margin: 0;
+    min-height: 100%;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0d47a1, #1565c0, #f0c94a);
+    background-size: 300% 300%;
+    animation: bgMove 10s ease infinite;
+}
+
+body.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+@keyframes bgMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+body.login-page .login-modern {
+    animation: fadeSlideIn 0.7s ease-out;
+}
+
+@keyframes fadeSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.stok-modern {
+    padding-bottom: 60px;
+}
+
+.stok-grid-modern {
+    align-items: start;
+}
+
+/* CARD LOGIN */
+.input-group input {
+    width: 100%;
+    padding: 14px 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    background: transparent;
+    box-sizing: border-box;
+}
+
+/* label default */
+.input-group label {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+    font-size: 16px;
+    pointer-events: none;
+    transition: 0.2s ease;
+    background: white;
+    padding: 0 5px;
+}
+
+.input-group input:focus+label,
+.input-group input:not(:placeholder-shown)+label {
+    top: -8px;
+    font-size: 12px;
+    color: #00509e;
+}
+
+.login-modern {
+    width: 100%;
+    max-width: 420px;
+    background: rgba(255, 255, 255, 0.97);
+    padding: 42px 38px;
+    border-radius: 20px;
+    box-shadow: 0 20px 45px rgba(251, 151, 0, 0.641);
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* LOGO */
+.logo-login {
+    width: 105px;
+    display: block;
+    margin: 0 auto 18px;
+    object-fit: contain;
+}
+
+/* JUDUL */
+.login-modern h1 {
+    font-size: 30px;
+    color: #1e2a38;
+    margin-bottom: 28px;
+}
+
+/* INPUT */
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 14px 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    background: transparent;
+}
+
+/* label default */
+.input-group label {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+    font-size: 16px;
+    pointer-events: none;
+    transition: 0.2s ease;
+    background: white;
+    padding: 0 5px;
+}
+
+/* saat fokus atau ada isi */
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label {
+    top: -8px;
+    font-size: 12px;
+    color: #00509e;
+}
+
+/* hilangkan placeholder saat fokus */
+.input-group input:focus::placeholder {
+    color: transparent;
+}
+
+.input-group input::placeholder {
+    color: #bbb;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #2d6cdf;
+    background: white;
+    box-shadow: 0 0 0 4px rgba(45, 108, 223, 0.12);
+}
+
+/* LINK */
+.forgot-password {
+    text-align: right;
+    margin-bottom: 22px;
+}
+
+.forgot-password a,
+.register-link a {
+    text-decoration: none;
+    color: #2d6cdf;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.forgot-password a:hover,
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+/* BUTTON */
+.btn-login {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #f0c94a, #e0b52f);
+    color: #1e2a38;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-login:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.18);
+}
+
+/* REGISTER */
+.register-link {
+    text-align: center;
+    margin-top: 16px;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    .login-modern {
+        width: 90%;
+        padding: 32px 24px;
+    }
+    .login-modern h1 {
+        font-size: 24px;
+    }
+    .logo-login {
+        width: 85px;
+    }
+}
+
+
+/* ====== DASHBOARD SITTA NAVBAR ======= */
+.navbar-sitta {
+    background-color: #1e2a38;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    justify-content: space-between;
+}
+
+.nav-left,
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 0;
+}
+
+.nav-right a {
+    background: #d32f2f;
+}
+
+.nav-right a:hover {
+    background: #b71c1c;
+}
+
+.navbar-sitta a,
+.dropbtn {
+    color: white;
+    text-decoration: none;
+    padding: 16px 20px;
+    display: block;
+    font-size: 16px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.navbar-sitta a,
+.dropbtn {
+    transition: 0.2s;
+}
+
+.navbar-sitta a:hover,
+.dropdown:hover .dropbtn {
+    background-color: #d32f2f;
+    color: white;
+}
+
+/* ===== Greeting ===== */
+#greeting {
+    display: inline-block;
+    padding: 14px 20px;
+    border-radius: 14px;
+    color: #1e2a38;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+    font-weight: 600;
+    line-height: 1.5;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    transition: all 0.4s ease;
+}
+
+body.morning #greeting {
+    background: linear-gradient(135deg, #a8e6ff, #ffffff);
+    color: #1e2a38;
+}
+
+body.afternoon #greeting {
+    background: linear-gradient(135deg, #fff3b0, #ffffff);
+    color: #1e2a38;
+}
+
+body.morning #greeting,
+body.afternoon #greeting {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+body.evening #greeting {
+    background: linear-gradient(135deg, #ffd6a5, #ffffff);
+    color: #1e2a38;
+}
+
+body.night #greeting {
+    background: linear-gradient(135deg, #1e2a38, #2d3e50);
+    color: #ffff;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* ===== Dropdown ===== */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    min-width: 260px;
+    background: white;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    z-index: 9999;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 12px 15px;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block !important;
+}
+
+.navbar-sitta {
+    overflow: visible !important;
+}
+
+/* link */
+.dropdown-content a {
+    color: #333;
+    padding: 12px 15px;
+    text-decoration: none;
+    display: block;
+    transition: 0.2s;
+}
+
+.dropdown-content a:hover {
+    background-color: #d32f2f;
+    color: white;
+    padding-left: 22px;
+    border-left: 4px solid #ffcc00;
+}
+
+/* show dropdown */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* ===== Dashboard Content ===== */
+.dashboard-sitta {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Judul utama */
+.dashboard-sitta h1 {
+    font-size: 52px;
+    color: #1e2a38;
+    margin-bottom: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* Sub judul */
+.dashboard-sitta h3 {
+    margin-bottom: 30px;
+    font-size: 28px;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.dashboard-sitta h3:hover {
+    color: #f0c94a;
+    transform: translateY(-2px);
+}
+
+/* BOX INFO */
+.dashboard-info-box {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    line-height: 1.8;
+    font-size: 17px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.dashboard-info-box:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navbar-sitta {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .dropdown-content {
+        position: static;
+        box-shadow: none;
+    }
+    .dashboard-sitta h1 {
+        font-size: 28px;
+    }
+}
+
+/* ===== Tracing Bahan Ajar ===== */
+.search-box {
+    display: flex;
+    gap: 10px;
+    margin: 15px 0 25px;
+}
+
+.search-box input,
+.search-box select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    width: 100%;
+    font-size: 14px;
+}
+
+/* ===== info bahan ajar ===== */
+.stok-modern {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+    /* INI bikin ada space kiri kanan */
+}
+
+.stok-grid-modern {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    row-gap: 50px;
+    column-gap: 50px;
+    justify-content: center;
+    /* bikin lebih center */
+}
+
+.book-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    cursor: pointer;
+    transition: 0.25s ease;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    /* PENTING */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.book-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgb(255, 116, 9);
+}
+
+.book-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+    background: #ffffff;
+    padding: 10px;
+}
+
+.stok-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #d32f2f;
+    color: white;
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 20px;
+}
+
+.book-card h3 {
+    min-height: 40px;
+}
+
+.book-card p {
+    margin: 4px 0;
+}
+
+.book-detail {
+    display: none;
+}
+
+.book-detail {
+    display: none;
+}
+
+.book-detail.active {
+    display: block;
+}
+
+.btn-detail {
+    margin-top: 10px;
+    padding: 6px 12px;
+    border: none;
+    background: #2d6cdf;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.stok-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 4px 8px;
+    font-size: 11px;
+    border-radius: 10px;
+}
+
+/* ===== Tambah Bahan Ajar ===== */
+.form-stok {
+    margin-top: 40px;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-stok h3 {
+    margin-bottom: 20px;
+    color: #1e2a38;
+    font-size: 20px;
+}
+
+/* input stock */
+.form-stok input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    transition: 0.2s;
+}
+
+.form-stok input:focus {
+    border-color: #2d6cdf;
+    box-shadow: 0 0 5px rgba(45, 108, 223, 0.2);
+}
+
+/* tombol */
+.btn-add {
+    width: 100%;
+    padding: 12px;
+    background: #2d6cdf;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-add:hover {
+    background: #1f4fb2;
+}
+
+/* ===== TRACKING INFO BOX ===== */
+.tracking-info-panel {
+    background: #f8fbff;
+    border: 1px solid #d9e8ff;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* tiap baris */
+.tracking-row {
+    display: flex;
+    align-items: flex-start;
+
+    padding: 10px 0;
+    border-bottom: 1px solid #e6eefc;
+}
+
+/* hapus garis terakhir */
+.tracking-row:last-child {
+    border-bottom: none;
+}
+
+/* label kiri */
+.tracking-row .label {
+    min-width: 170px;
+    /* semua label sejajar */
+    font-size: 14px;
+    color: #555;
+    font-weight: 600;
+
+    position: relative;
+}
+
+/* titik dua otomatis */
+.tracking-row .label::after {
+    content: ":";
+    position: absolute;
+    right: 10px;
+    color: #555;
+    font-weight: bold;
+}
+
+/* isi kanan */
+.tracking-row strong {
+    font-size: 15px;
+    color: #1e2a38;
+    font-weight: 500;
+    margin-left: 15px;
+    flex: 1;
+    word-break: break-word;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .tracking-row {
+        flex-direction: column;
+    }
+
+    .tracking-row .label {
+        min-width: auto;
+        margin-bottom: 4px;
+    }
+
+    .tracking-row .label::after {
+        position: static;
+        margin-left: 4px;
+    }
+
+    .tracking-row strong {
+        margin-left: 0;
+    }
+}
+
+/* ===== TRACKING SITTA ===== */
+.tracking-modern {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.tracking-modern h1 {
+    font-size: 36px;
+    color: #1e2a38;
+    margin-bottom: 30px;
+}
+
+.tracking-search-box {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.tracking-search-box label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+.tracking-search-box input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    margin-bottom: 20px;
+}
+
+.tracking-search-box input:focus {
+    border-color: #2d6cdf;
+}
+
+.btn-search {
+    background: #e8c547;
+    color: #333;
+    border: none;
+    padding: 12px 30px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    width: auto;
+}
+
+.btn-search:hover {
+    background: #d4b03d;
+}
+
+/* Result */
+.tracking-result-modern {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.tracking-result-modern h3 {
+    background: #2d6cdf;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.tracking-result-modern p {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.tracking-result-modern h4 {
+    margin-top: 25px;
+    margin-bottom: 15px;
+    color: #1e2a38;
+}
+
+/* Timeline */
+.tracking-result-modern ul {
+    list-style: none;
+    margin: 20px 0 0 0;
+    padding-left: 35px;
+    position: relative;
+}
+
+/* garis utama panjang */
+.tracking-result-modern ul::before {
+    content: "";
+    position: absolute;
+    left: 8px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: #2d6cdf;
+}
+
+/* tiap item */
+.tracking-result-modern ul li {
+    position: relative;
+    margin-bottom: 22px;
+    padding-left: 20px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* bulatan */
+.tracking-result-modern ul li::before {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: white;
+    border: 3px solid #2d6cdf;
+    border-radius: 50%;
+    left: -34px;
+    top: 4px;
+}
+
+/* waktu */
+.tracking-result-modern ul li strong {
+    display: block;
+    color: #1e2a38;
+    margin-bottom: 4px;
+    font-size: 14px;
+}
+
+/* item terakhir tidak terlalu mepet */
+.tracking-result-modern ul li:last-child {
+    margin-bottom: 0;
+}
+
+.tracking-result-modern ul li strong {
+    display: block;
+    color: #1e2a38;
+    margin-bottom: 4px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .tracking-modern h1 {
+        font-size: 28px;
+    }
+}
+
+/* ===== MODAL SITTA ===== */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    /* animasi */
+    animation: fadeIn 0.2s ease-in-out;
+}
+
+.modal-content {
+    background: white;
+    margin: 12% auto;
+    padding: 25px;
+    width: 90%;
+    max-width: 380px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    animation: slideUp 0.3s ease;
+}
+
+.close {
+    position: absolute;
+    right: 12px;
+    top: 8px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* ===== CUSTOM ALERT LOGIN ===== */
+#alertModal .modal-content {
+    max-width: 380px;
+    text-align: center;
+    border-top: 5px solid #d32f2f;
+}
+
+#alertModal h3 {
+    color: #d32f2f;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+#alertModal p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+#alertModal .btn-login {
+    width: 100%;
+    margin-top: 10px;
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login SITTA UT</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="login-page">
+
+    <!-- KONTEN UTAMA LOGIN -->
+    <main class="login-modern">
+
+        <!-- HEADER LOGIN -->
+        <header>
+            <img src="img/logo-ut.png" alt="Logo UT" class="logo-login">
+            <h1>Selamat Datang</h1>
+        </header>
+
+        <!-- FORM LOGIN -->
+        <form id="loginForm">
+
+            <section class="input-group">
+                <input type="email" id="email" placeholder="Email" required>
+                <label>Email</label>
+            </section>
+
+            <section class="input-group">
+                <input type="password" id="password" placeholder="Password" required>
+                <label>Password</label>
+            </section>
+
+            <!-- NAV LINK -->
+            <nav class="forgot-password">
+                <a href="#" onclick="openModal('forgotModal')">Lupa password?</a>
+            </nav>
+
+            <button type="submit" class="btn-login">Masuk</button>
+
+            <nav class="register-link">
+                <a href="#" onclick="openModal('registerModal')">Belum punya akun?</a>
+            </nav>
+
+        </form>
+
+    </main>
+
+    <!-- MODAL LUPA PASSWORD -->
+    <section id="forgotModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('forgotModal')">&times;</span>
+            <h3>Lupa Password</h3>
+            <p>Silakan hubungi Administrator SITTA / UPBJJ untuk reset password.</p>
+        </div>
+    </section>
+
+    <!-- MODAL REGISTER -->
+    <section id="registerModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('registerModal')">&times;</span>
+            <h3>Daftar Akun</h3>
+            <p>Pendaftaran akun dilakukan melalui UT Daerah / UPBJJ masing-masing.</p>
+        </div>
+    </section>
+
+    <!-- MODAL SUCCESS -->
+    <section id="successModal" class="modal">
+        <div class="modal-content success-modal">
+            <span class="close" onclick="closeModal('successModal')">&times;</span>
+            <h3>Login Berhasil</h3>
+            <p>Selamat datang di SITTA UT.</p>
+            <button class="btn-login" onclick="goToDashboard()">Lanjutkan</button>
+        </div>
+    </section>
+
+    <!-- MODAL ALERT -->
+    <section id="alertModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('alertModal')">&times;</span>
+            <h3>Login Gagal</h3>
+            <p id="alertMessage">email/password yang anda masukkan salah</p>
+            <button class="btn-login" onclick="closeModal('alertModal')">OK</button>
+        </div>
+    </section>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
