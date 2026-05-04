@@ -71,6 +71,11 @@ window.addEventListener("click", function (event) {
     });
 });
 
+function showAlert(pesan) {
+    document.getElementById("alertMessage").innerText = pesan;
+    openModal("alertModal");
+}
+
 // ===============================
 // DASHBOARD GREETING (DOM UPDATE)
 // ===============================
@@ -104,7 +109,7 @@ function setGreeting() {
 // ===============================
 function logout() {
     localStorage.clear();
-    alert("Anda telah logout");
+    showAlert("Anda telah logout");
 }
 
 // ===============================
@@ -119,7 +124,7 @@ function searchTracking() {
     const value = input.value.trim();
 
     if (!value) {
-        alert("Masukkan nomor DO!");
+        showAlert("Masukkan nomor DO!");
         return;
     }
 
@@ -127,7 +132,7 @@ function searchTracking() {
 
     if (!data) {
         result.innerHTML = "";
-        alert("Data tidak ditemukan");
+        showAlert("Data tidak ditemukan");
         return;
     }
 
@@ -240,7 +245,7 @@ function addStok() {
     const stok = document.getElementById("stok").value.trim();
 
     if (!kodeBarang || !namaBarang || !stok) {
-        alert("Semua field wajib diisi!");
+        showAlert("Semua field wajib diisi!");
         return;
     }
 
@@ -262,7 +267,7 @@ function addStok() {
     document.getElementById("namaBarang").value = "";
     document.getElementById("stok").value = "";
 
-    alert("Data berhasil ditambahkan!");
+    showAlert("Data berhasil ditambahkan!");
 }
 
 function goToDashboard() {
